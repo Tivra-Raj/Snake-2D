@@ -1,0 +1,355 @@
+fileFormatVersion: 2
+guid: 78dd98de9d249e5418a2ecd3af01afc5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 510
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78da13c87bd02c240aa7e29a73fcd47b
+      internalID: -1051572325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_1
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1280
+        width: 510
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a21173251d70a4eb26ada8578f5204
+      internalID: -1899777449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_2
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1280
+        width: 510
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4253322238c8a24ea231f8b463c0a4d
+      internalID: -783314442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_3
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 1280
+        width: 510
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a989ecb1e312feb478d7af35eee1c54e
+      internalID: 1098543441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 510
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1293086968abb4188573cf2d99c0fa
+      internalID: -1143698190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_5
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 640
+        width: 510
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ec00293a39f204bb5c7df190ced693
+      internalID: -675282076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_6
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 640
+        width: 510
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebec03f752465541bf565e6f0d70df7
+      internalID: -1861855582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_7
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 640
+        width: 510
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8622dae8c35699849afcff26e414c895
+      internalID: -994388953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 510
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0882b96c1d759b0439935f5b3d1c11eb
+      internalID: -13068955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_9
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 0
+        width: 510
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc8fa8008467b6458c099d8c3a4399a
+      internalID: 1935796261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_3: 1098543441
+      kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_6: -1861855582
+      kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_8: -13068955
+      kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_5: -675282076
+      kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_4: -1143698190
+      kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_7: -994388953
+      kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_1: -1899777449
+      kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_9: 1935796261
+      kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_0: -1051572325
+      kisspng-iphone-com-ipad-insect-file-transfer-protocol-snake-texture-5b3b9dc8645de6.3355233215306336724111_2: -783314442
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

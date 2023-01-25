@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - wall
+  - Snake1
+  - Snake2
   layers:
   - Default
   - TransparentFX
@@ -11,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Wall
   - 
   - 
   - 
@@ -40,4 +43,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: water
+    uniqueID: 3377091511
+    locked: 0
+  - name: Ground
+    uniqueID: 2395430151
+    locked: 0
+  - name: wall
+    uniqueID: 2996588901
+    locked: 0
+  - name: props
+    uniqueID: 4165396805
+    locked: 0
+  - name: Player
+    uniqueID: 721858815
     locked: 0
