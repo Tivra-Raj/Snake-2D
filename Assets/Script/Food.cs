@@ -6,10 +6,20 @@ public class Food : MonoBehaviour
 {
     [SerializeField] BoxCollider2D spawnArea;
 
-    private void Start()
+    public enum FoodType
     {
-        SpawnFood();
+        None,
+        MassGainer,
+        MassBurner
     }
+
+    [SerializeField] FoodType type;
+
+    public FoodType GetFoodType()
+    {
+        return type;
+    }
+
     void SpawnFood()
     {
         Bounds bounds = spawnArea.bounds;
@@ -17,18 +27,14 @@ public class Food : MonoBehaviour
         float x = Random.Range(bounds.min.x, bounds.max.x);
         float y = Random.Range(bounds.min.y, bounds.max.y);
 
-        this.transform.position = new Vector3(Mathf.Round(x), Mathf.Round(y), 0f);
+        this.transform.position  = new Vector3(Mathf.Round(x), Mathf.Round(y), 0f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       if(collision.GetComponent<Snake_Controller>() != null)
-       {
+        if (collision.GetComponent<Snake_Controller>() != null)
+        {
             SpawnFood();
-       }
-       if(collision.GetComponent<Snake2_Controller>() != null)
-       {
-            SpawnFood();
-       }
+        }
     }
 }

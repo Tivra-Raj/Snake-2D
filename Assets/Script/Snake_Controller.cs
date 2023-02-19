@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
-using UnityEditor.Experimental.GraphView;
+using TMPro;
 using UnityEngine;
 
 public class Snake_Controller : MonoBehaviour
@@ -20,55 +18,123 @@ public class Snake_Controller : MonoBehaviour
         Down
     }
 
+    public enum SnakeType
+    {
+        None,
+        snake1,
+        snake2
+    }
+
+    [Header("Snake Type Info")]
+    [SerializeField] SnakeType snakeType;
+
+    [Header("Snake Movement Info")]
+    [SerializeField] float speedController;
+
     Vector2Int position;
     Direction direction;
     SnakeState state;
 
-    float speed;
-    float maxSpeed;
-    int snakeBodySize;
-    bool ateFood;
+    float moveTimer;
+    float maxMoveTimer;
+    float currentSpeedController;
+
+    [Header("Snake Body Info")]
+    [SerializeField] Sprite body;
+    [SerializeField] GameObject snakebodyHolder;
 
     List<SnakePosition> snakePostitonList;
     List<SnakeBodyPart> snakeBodyPartList;
 
-    [SerializeField] GameMenu_Manager gameMenu_Manager;
+    int snakeBodySize;
+
+    [Header("Power Ups Info")]
+    [SerializeField] TextMeshProUGUI EffectTimeLeftText;
+    [SerializeField] int EffectTimeLeft = 5;
+    int currentTime;
+
+    [Header("Score Info")]
     [SerializeField] Score_Controller score_Controller;
+    [SerializeField] int scoreValue = 10;
+    int currentScoreValue;
+
+    [Header("Game Over Info")]
+    [SerializeField] GameMenu_Manager gameMenu_Manager;
+    public bool gameOver;
+
+    [Header("Miscellaneous")]
     [SerializeField] ScreenWrapping screenWrapping;
-    [SerializeField] Food snakeFood;
-    [SerializeField] Sprite body;
-    [SerializeField] GameObject snakebodyHolder;
-    [SerializeField] float speedController;
 
     private void Awake()
     {
-        position = new Vector2Int(0, 0);
-        direction = Direction.Right;
-
-        maxSpeed = 0.2f;
-        speed = maxSpeed;
-        snakeBodySize = 0;
+        state = SnakeState.Alive;
 
         snakePostitonList = new List<SnakePosition>();
         snakeBodyPartList = new List<SnakeBodyPart>();
 
-        state = SnakeState.Alive;
+        direction = Direction.Right;
+        maxMoveTimer = 0.2f;
+        moveTimer = maxMoveTimer;
+        currentSpeedController = speedController;
+
+        snakeBodySize = 0;
+
+        currentTime = EffectTimeLeft;
+
+        currentScoreValue = scoreValue;
+    }
+
+    private void Start()
+    {
+        switch (snakeType)
+        {
+            case SnakeType.snake1:
+                position = new Vector2Int(0, 0);
+                break;
+
+            case SnakeType.snake2:
+                position = new Vector2Int(10, 10);
+                break;
+
+            default: break;
+        }
     }
 
     private void Update()
     {
-        switch(state)
+        if (gameOver)
+            return;
+        else
         {
-            case SnakeState.Alive:  MovementInput();
-                                    Movement();
-                                    break;
+            switch (state)
+            {
+                case SnakeState.Alive:
+                    MovementType();
+                    Movement();
+                    break;
 
-            case SnakeState.Dead:   gameMenu_Manager.GameOver();
-                                    break;
+                case SnakeState.Dead:
+                    gameMenu_Manager.GameOver();
+                    break;
+            }
         }
     }
 
-    void MovementInput()
+    void MovementType()
+    {
+        switch (snakeType)
+        {
+            case SnakeType.snake1:  MovementInput1();
+                break;
+                    
+            case SnakeType.snake2:  MovementInput2();
+                break;
+
+            default: break;
+        }
+    }
+
+    void MovementInput1()
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -100,13 +166,45 @@ public class Snake_Controller : MonoBehaviour
         }
     }
 
+    void MovementInput2()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (direction != Direction.Down)
+            {
+                direction = Direction.Up;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            if (direction != Direction.Up)
+            {
+                direction = Direction.Down;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if (direction != Direction.Right)
+            {
+                direction = Direction.Left;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (direction != Direction.Left)
+            {
+                direction = Direction.Right;
+            }
+        }
+    }
+
     void Movement()
     {
-        speed += Time.deltaTime;
-        speed *= speedController;
-        if(speed >= maxSpeed)
+        moveTimer += Time.deltaTime;
+        moveTimer *= speedController;
+        if(moveTimer >= maxMoveTimer)
         {
-            speed -= maxSpeed;
+            moveTimer -= maxMoveTimer;
 
             SnakePosition previousSnakePosition = null;
             if (snakePostitonList.Count > 0)
@@ -132,19 +230,6 @@ public class Snake_Controller : MonoBehaviour
             if(screenWrapping != null)
                 position = screenWrapping.ValidatePosition(position);
 
-            if (ateFood == true)
-            {
-                snakeBodySize++;
-                CreateSnakeBody();
-                AteFood();
-                ateFood = false;
-            }
-
-            if (snakePostitonList.Count >= snakeBodySize + 1)
-            {
-                snakePostitonList.RemoveAt(snakePostitonList.Count - 1);
-            }
-
             transform.position = new Vector3(position.x, position.y);
 
             float rot = Mathf.Atan2(-directionVector.y, -directionVector.x) * Mathf.Rad2Deg;
@@ -166,11 +251,75 @@ public class Snake_Controller : MonoBehaviour
         }
     }
 
+    void SnakeBody(Food.FoodType food)
+    {
+        switch(food)
+        {
+            case Food.FoodType.MassGainer:
+                snakeBodySize++;
+                CreateSnakeBody();
+                AteFood();
+                Debug.Log("Ate Mass Gainer Food");
+                break;
+
+            case Food.FoodType.MassBurner:
+                snakeBodySize--;
+                DeleteSnakeBody();
+                Debug.Log("Ate Mass Burner Food");
+                break;
+        }
+    }
+
+    IEnumerator PowerUpTimer()
+    {
+        while(EffectTimeLeft > 0)
+        {
+            EffectTimeLeftText.enabled = true;
+            yield return new WaitForSeconds(1f);
+            EffectTimeLeft -= 1;
+            EffectTimeLeftText.text = "Effect Time Left : " + EffectTimeLeft; 
+            Debug.Log("time left " + EffectTimeLeft);
+        }
+        ResetPowerUP();
+        EffectTimeLeftText.enabled = false;
+        EffectTimeLeft = currentTime;
+    }
+
+    void SetPowerUp(PowerUpType.PowerType type)
+    {
+        switch (type)
+        {
+            case PowerUpType.PowerType.Speed:
+                speedController = 1.10f;
+                break;
+
+            case PowerUpType.PowerType.Slow:
+                speedController = 1f;
+                break;
+
+            case PowerUpType.PowerType.ScoreBooster:
+                scoreValue *= 2;
+                break;
+        }
+        StartCoroutine("PowerUpTimer");
+    }
+
+    void ResetPowerUP()
+    {
+        speedController = currentSpeedController;
+        scoreValue = currentScoreValue;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.GetComponent<Food>() != null )
         {
-            ateFood = true;
+            SnakeBody(collision.GetComponent<Food>().GetFoodType());
+        }
+
+        if(collision.GetComponent<PowerUpType>() != null )
+        {
+            SetPowerUp(collision.GetComponent<PowerUpType>().GetPowerType());
         }
 
         if (collision.gameObject.tag == "wall")
@@ -179,9 +328,9 @@ public class Snake_Controller : MonoBehaviour
             state = SnakeState.Dead;
         }
 
-        if (collision.gameObject.tag == "Snake2")
+        if (collision.gameObject.tag == "Snake")
         {
-            Debug.Log("collided with Snake2");
+            Debug.Log("collided with Another Snake");
             state = SnakeState.Dead;
         }
     }
@@ -191,15 +340,27 @@ public class Snake_Controller : MonoBehaviour
         snakeBodyPartList.Add(new SnakeBodyPart(body, snakebodyHolder));
     }
 
+    void DeleteSnakeBody()
+    {
+        if (snakeBodyPartList.Count != 0 && snakeBodySize != 0)
+        {
+            snakeBodySize--;
+            int lastIndex = snakeBodyPartList.Count - 1;
+            Transform lastBodyPart = snakeBodyPartList[lastIndex].transform;
+            snakeBodyPartList.RemoveAt(lastIndex);
+            Destroy(lastBodyPart.gameObject);
+        }
+    }
+
     private class SnakeBodyPart
     {
         private SnakePosition SnakePosition;
-        private Transform transform;
+        public Transform transform;
 
         public SnakeBodyPart(Sprite snakebody, GameObject snakeBodyHolder)
         {
             GameObject snakeBody = new GameObject("SnakeBody", typeof(SpriteRenderer));
-            snakeBody.tag = "Snake1";
+            snakeBody.tag = "Snake";
             snakeBody.AddComponent(typeof(BoxCollider2D));
             BoxCollider2D boxCollider = snakeBody.GetComponent<BoxCollider2D>();
             boxCollider.size = new Vector2(0.75f, 0.75f);
@@ -266,6 +427,6 @@ public class Snake_Controller : MonoBehaviour
 
     public void AteFood()
     {
-        score_Controller.AddScore(10);
+        score_Controller.AddScore(scoreValue);
     }
 }

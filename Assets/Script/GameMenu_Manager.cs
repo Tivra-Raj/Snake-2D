@@ -8,7 +8,7 @@ public class GameMenu_Manager : MonoBehaviour
 {
     [SerializeField] GameObject gameOverMenu;
     [SerializeField] GameObject pauseMenu;
-    [SerializeField] Score_Controller Score_Controller;
+    [SerializeField] Snake_Controller snake_Controller;
 
     [Header("Game Over Buttons")]
     [SerializeField] Button restart;
@@ -46,6 +46,7 @@ public class GameMenu_Manager : MonoBehaviour
     }
     public void GameOver()
     {
+        snake_Controller.gameOver = true;
         gameOverMenu.SetActive(true);
     }
 

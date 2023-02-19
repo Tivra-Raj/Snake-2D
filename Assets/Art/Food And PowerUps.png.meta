@@ -1,0 +1,839 @@
+fileFormatVersion: 2
+guid: e7c92fd9d2046aa4287f12203d901505
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 18
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Food And PowerUps_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 134.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00760fc8728b00f4e8c2905b3f701fdf
+      internalID: 1040808194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 134.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1e9a9501c5cbb4986afeb8d8997c78
+      internalID: -1849784870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 134.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5680a5feec062848a2247e19687c1be
+      internalID: 1774568227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 134.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d9e5a298af9af488c4111d21d8c583
+      internalID: -1649026471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 134.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af48a9faaa64b9f44a947ecf7acf6988
+      internalID: -999400373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 134.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c72a561893ff04fa40a86dd22a4c00
+      internalID: -1399245466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 134.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ffbda1d90a619439bc5b7a8165244a
+      internalID: -1841903781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 134.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2289caf5c011aed4f9431141ad50fc4a
+      internalID: 1001984375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd36400ba00e1f4595b8f18affce8b5
+      internalID: 1280061301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_9
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 90.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094bb48d9fb2ee94194caa4be8509e44
+      internalID: -550958278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_10
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 90.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f72398030f8593c4fad9ac889819ec2b
+      internalID: 73445089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_11
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 90.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de2ef3c083d39446942da18c60708fa
+      internalID: -1987936561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_12
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 90.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813adfeb1e3dd6d49bbf03590a85ccfe
+      internalID: -381440596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_13
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 90.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0d46c550937fa428293b003925f07c
+      internalID: 1400320233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_14
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 90.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74509eda793d02247866c824e156da84
+      internalID: -1534709183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_15
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 90.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b764db455491d67479fe6555f21eb2f6
+      internalID: 1215813966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 46.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88267c66df0441646a4b2f7a6c0cc062
+      internalID: 1095630221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_17
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 46.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ccc5202f8746d74f9475356a4457b88
+      internalID: -14246106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_18
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 46.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95d3b3553c8ca04bb909745d5d55b43
+      internalID: 990019302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_19
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 46.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03174830c1e91cc4689bf343bd2dd614
+      internalID: -1887697303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_20
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 46.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fed34796d719341814a5e4d116bbc3
+      internalID: -1850791179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_21
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 46.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e03160d4dbc3e4439f28ea0d6eb286c
+      internalID: 769844844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_22
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 46.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8a123e3c5f3cf43ae8a132b7f93498
+      internalID: -1647139221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_23
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 46.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e84cc4a304ffd14d89ec1a2efbf8670
+      internalID: -2105506948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd9dd8268381964796fe80f562ef705
+      internalID: 1171415363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_25
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 2.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4acd918796f50242b6929d0a7677105
+      internalID: -492862173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_26
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 2.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df87000c664fa8b4daf652ced7941c6b
+      internalID: 1628060155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_27
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 2.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03aa2b2bdc4e3ae42b504b39ce35794c
+      internalID: 1930273475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_28
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 2.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08bd8756e937f94d9dcb375b5e51857
+      internalID: -441528786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_29
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 2.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7569945aecea9484f8d9a53bd078c66c
+      internalID: -2079500261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_30
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 2.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0650b060825af764d9d9fc958b0aa7cf
+      internalID: 606795529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Food And PowerUps_31
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 2.25
+        width: 33.125
+        height: 44.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea82db16ad55874192c6a1209388e2f
+      internalID: -1820617128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Food And PowerUps_5: -1399245466
+      Food And PowerUps_31: -1820617128
+      Food And PowerUps_14: -1534709183
+      Food And PowerUps_7: 1001984375
+      Food And PowerUps_21: 769844844
+      Food And PowerUps_9: -550958278
+      Food And PowerUps_18: 990019302
+      Food And PowerUps_19: -1887697303
+      Food And PowerUps_29: -2079500261
+      Food And PowerUps_1: -1849784870
+      Food And PowerUps_3: -1649026471
+      Food And PowerUps_10: 73445089
+      Food And PowerUps_17: -14246106
+      Food And PowerUps_20: -1850791179
+      Food And PowerUps_27: 1930273475
+      Food And PowerUps_25: -492862173
+      Food And PowerUps_15: 1215813966
+      Food And PowerUps_16: 1095630221
+      Food And PowerUps_28: -441528786
+      Food And PowerUps_2: 1774568227
+      Food And PowerUps_30: 606795529
+      Food And PowerUps_0: 1040808194
+      Food And PowerUps_11: -1987936561
+      Food And PowerUps_22: -1647139221
+      Food And PowerUps_24: 1171415363
+      Food And PowerUps_4: -999400373
+      Food And PowerUps_6: -1841903781
+      Food And PowerUps_13: 1400320233
+      Food And PowerUps_26: 1628060155
+      Food And PowerUps_8: 1280061301
+      Food And PowerUps_12: -381440596
+      Food And PowerUps_23: -2105506948
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

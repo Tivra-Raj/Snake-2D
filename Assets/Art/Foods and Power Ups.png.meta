@@ -1,0 +1,531 @@
+fileFormatVersion: 2
+guid: 933e18b3963d83d428ed072e750a2922
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 134
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac5c14b7f4eace4691d90b43f3faa64
+      internalID: 2129592963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 134
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffbc03e61b2a033439e5d74d11e74ae6
+      internalID: 1343962404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 134
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e09f66d44c3d524d94227f580797406
+      internalID: -516813856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 136
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fde593d474d01e459e29eae7a1d97ed
+      internalID: 2059787122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 136
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8254b8cec2c0cff4fa61b602a4889d03
+      internalID: -2179339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 136
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098d4e8d11977c848a76737096299f13
+      internalID: -1709684792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 134
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddc4a7da6f0f3c459f48bf9044607bb
+      internalID: -1884675330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 134
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0888644e357ad4e8d7c6cea216fdea
+      internalID: -806483793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 65
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b478af0ed1e13418a1503577e82608
+      internalID: -147429570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 90
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5149659fc357e4b8abc13fedddf4f3
+      internalID: -361298008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 90
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a5abafd1a57594ca20ddb1b70beec8
+      internalID: -106179791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 48
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e1b56b075024848889acb474bf2c61
+      internalID: 1635383725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 47
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72590a52fbad9f5429d5be266995a26d
+      internalID: 450306232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3bc1b750e552642a89b472107528f6
+      internalID: 1864627112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 48
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d527fd3bdf2419418692c9caea5cb1d
+      internalID: 278058908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 48
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1cacf6e1ee6cf488ac013d950e20df
+      internalID: 1954355441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 48
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ed91025b0dd234a87426e379d41c3e
+      internalID: -1987553410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 8
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a3cf76aae1f664da17d2d97f576cea
+      internalID: -726842350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_17: -726842350
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_5: -1709684792
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_9: -361298008
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_6: -1884675330
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_15: 1954355441
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_0: 2129592963
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_4: -2179339
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_10: -106179791
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_16: -1987553410
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_7: -806483793
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_3: 2059787122
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_14: 278058908
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_1: 1343962404
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_8: -147429570
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_12: 450306232
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_11: 1635383725
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_2: -516813856
+      Mobile_-_Snake_III_-_Decorations_Food___Items-removebg-preview-removebg-preview_13: 1864627112
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

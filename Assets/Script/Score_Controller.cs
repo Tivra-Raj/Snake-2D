@@ -1,11 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
-using UnityEngine.UI;
+
 
 public class Score_Controller : MonoBehaviour
 {
@@ -13,7 +8,6 @@ public class Score_Controller : MonoBehaviour
     [SerializeField] TextMeshProUGUI highScoreText;
 
     private int score = 0;
-    private int player2score = 0;
     private int HighScore; 
 
     private void Start()
@@ -42,15 +36,5 @@ public class Score_Controller : MonoBehaviour
                 highScoreText.text = "HighScore : " + score.ToString();
         }
         return HighScore;
-    }
-
-    public void MultiPlayerScore(int increament)
-    {
-        player2score += increament;
-        scoreText.text = "" + player2score;
-    }
-    public int GetMultiPlayerScore()
-    {
-        return player2score;
     }
 }
