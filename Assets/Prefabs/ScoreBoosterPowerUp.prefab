@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4726455053138544113}
   - component: {fileID: 7903874210394152415}
   - component: {fileID: -3411311302271224915}
-  - component: {fileID: 6217978954358496825}
+  - component: {fileID: 6895078050540849791}
   m_Layer: 0
   m_Name: ScoreBoosterPowerUp
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7903874210394152415
 SpriteRenderer:
@@ -96,6 +96,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -112,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1875, y: 1.125}
   m_EdgeRadius: 0
---- !u!114 &6217978954358496825
+--- !u!114 &6895078050540849791
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7459766221199417097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00f96d6237b93b947acb4968bc328651, type: 3}
+  m_Script: {fileID: 11500000, guid: f6e4ef337cb805647972c69c8986f7d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3

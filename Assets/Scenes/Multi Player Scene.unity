@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -167,7 +167,7 @@ Transform:
   - {fileID: 166994110}
   - {fileID: 731949566}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &28995145
 GameObject:
@@ -14864,7 +14864,7 @@ Transform:
   m_Children:
   - {fileID: 1109438069}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &268016300
 MonoBehaviour:
@@ -14887,7 +14887,8 @@ MonoBehaviour:
   score_Controller: {fileID: 268016303}
   scoreValue: 10
   gameMenu_Manager: {fileID: 959673225}
-  gameOver: 0
+  GameOverStats: {fileID: 835274897}
+  gameOverOrPaused: 0
   screenWrapping: {fileID: 296871383}
 --- !u!50 &268016301
 Rigidbody2D:
@@ -14906,6 +14907,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -14920,6 +14927,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -14945,7 +14971,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 268016296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7494843209b811c46b95eecd16d8a064, type: 3}
+  m_Script: {fileID: 11500000, guid: b8d11c0f30d6f7148b211dce9fa72004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 726927525}
@@ -15056,6 +15082,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -15308,7 +15353,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -15316,14 +15360,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -15338,9 +15374,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -17171,7 +17215,7 @@ GameObject:
   - component: {fileID: 835274894}
   - component: {fileID: 835274896}
   - component: {fileID: 835274895}
-  - component: {fileID: 835274898}
+  - component: {fileID: 835274897}
   m_Layer: 5
   m_Name: GameOver Background
   m_TagString: Untagged
@@ -17244,7 +17288,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835274893}
   m_CullTransparentMesh: 1
---- !u!114 &835274898
+--- !u!114 &835274897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17253,7 +17297,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 835274893}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7d2696203ee2b84c957b3783c03e054, type: 3}
+  m_Script: {fileID: 11500000, guid: bba13dc9f7d584943a9c5253090ff5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player1ScoreText: {fileID: 891459908}
@@ -17263,7 +17307,7 @@ MonoBehaviour:
   player1WonText: {fileID: 1475252034}
   player2WonText: {fileID: 334962966}
   player1_ScoreController: {fileID: 268016303}
-  player2_ScoreController: {fileID: 1325165168}
+  player2_ScoreController: {fileID: 1325165174}
   gamePlayType: 2
 --- !u!1 &891459906
 GameObject:
@@ -17477,7 +17521,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 100
   m_TargetDisplay: 0
@@ -17513,12 +17559,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 959673220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ecbc043e6f30524b98ca94614e91232, type: 3}
+  m_Script: {fileID: 11500000, guid: 8416a3217f7161e4298a31acdc26a4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverMenu: {fileID: 495370275}
   pauseMenu: {fileID: 704908463}
-  snake_Controller: {fileID: 268016300}
+  snake_Controller:
+  - {fileID: 268016300}
+  - {fileID: 1325165173}
   restart: {fileID: 1450183396}
   mainMenu: {fileID: 985603930}
   back: {fileID: 1484849711}
@@ -17665,6 +17713,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3228952582677478172, guid: d599a1c7fc8e4f74fb1bcbe232ad93f6, type: 3}
@@ -17723,7 +17772,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3937729125260167453, guid: d599a1c7fc8e4f74fb1bcbe232ad93f6, type: 3}
+      propertyPath: spawnArea
+      value: 
+      objectReference: {fileID: 1190462875}
+    - target: {fileID: 3993213215420385035, guid: d599a1c7fc8e4f74fb1bcbe232ad93f6, type: 3}
+      propertyPath: spawnArea
+      value: 
+      objectReference: {fileID: 1190462875}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d599a1c7fc8e4f74fb1bcbe232ad93f6, type: 3}
 --- !u!1 &1057164664
 GameObject:
@@ -17806,6 +17866,7 @@ SortingGroup:
   m_SortingLayerID: 721858815
   m_SortingLayer: 5
   m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!114 &1109438071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17967,6 +18028,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -18011,7 +18091,7 @@ GameObject:
   - component: {fileID: 1325165167}
   - component: {fileID: 1325165166}
   - component: {fileID: 1325165173}
-  - component: {fileID: 1325165168}
+  - component: {fileID: 1325165174}
   m_Layer: 0
   m_Name: Snake2
   m_TagString: Snake
@@ -18029,6 +18109,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -18062,24 +18161,16 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &1325165168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325165165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7494843209b811c46b95eecd16d8a064, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 230339679}
-  highScoreText: {fileID: 0}
 --- !u!212 &1325165170
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18146,7 +18237,7 @@ Transform:
   m_Children:
   - {fileID: 1912203222}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1325165173
 MonoBehaviour:
@@ -18166,11 +18257,26 @@ MonoBehaviour:
   snakebodyHolder: {fileID: 387994004}
   EffectTimeLeftText: {fileID: 0}
   EffectTimeLeft: 5
-  score_Controller: {fileID: 1325165168}
+  score_Controller: {fileID: 1325165174}
   scoreValue: 10
   gameMenu_Manager: {fileID: 959673225}
-  gameOver: 0
+  GameOverStats: {fileID: 835274897}
+  gameOverOrPaused: 0
   screenWrapping: {fileID: 296871383}
+--- !u!114 &1325165174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325165165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d11c0f30d6f7148b211dce9fa72004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 230339679}
+  highScoreText: {fileID: 0}
 --- !u!1 &1450183393
 GameObject:
   m_ObjectHideFlags: 0
@@ -19233,6 +19339,7 @@ SortingGroup:
   m_SortingLayerID: 721858815
   m_SortingLayer: 5
   m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!114 &1912203224
 MonoBehaviour:
   m_ObjectHideFlags: 0

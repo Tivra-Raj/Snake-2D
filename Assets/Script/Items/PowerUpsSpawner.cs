@@ -3,18 +3,19 @@ using UnityEngine;
 
 public class PowerUpsSpawner : MonoBehaviour
 {
-    [SerializeField] BoxCollider2D spawnArea;
-    [SerializeField] float powerUpShowTime = 5;
-    [SerializeField] float powerUpRemaningTime = 5;
-    [SerializeField] GameObject[] powerUps;
+    [SerializeField] private Snake_Controller snake_Controller;
+    [SerializeField] private BoxCollider2D spawnArea;
+    [SerializeField] private float powerUpShowTime = 5;
+    [SerializeField] private float powerUpRemaningTime = 5;
+    [SerializeField] private GameObject[] powerUps;
 
-    GameObject powerUp;
-    Vector2 randomPos;
+    private GameObject powerUp;
+    private Vector2 randomPos;
 
-    float totalTime;
-    float currenttime;
+    private float totalTime;
+    private float currenttime;
 
-    bool powerUpSpwaned;
+    private bool powerUpSpwaned;
 
     private void Start()
     {
@@ -24,6 +25,8 @@ public class PowerUpsSpawner : MonoBehaviour
 
     private void Update()
     {
+        if(snake_Controller.gameOverOrPaused) { return; }
+
         currenttime -= 1 * Time.deltaTime;
 
         if (currenttime <= (totalTime - powerUpShowTime) && !powerUpSpwaned)

@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScreenWrapping : MonoBehaviour
 {
-    [SerializeField] BoxCollider2D GridArea;
+    [SerializeField] private BoxCollider2D GridArea;
+
     public Vector2Int ValidatePosition(Vector2Int position)
     {
         Bounds bounds = GridArea.bounds;

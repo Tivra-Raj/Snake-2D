@@ -1,23 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using Sounds;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameMenu_Manager : MonoBehaviour
 {
-    [SerializeField] GameObject gameOverMenu;
-    [SerializeField] GameObject pauseMenu;
-    [SerializeField] Snake_Controller snake_Controller;
+    [SerializeField] private GameObject gameOverMenu;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private Snake_Controller[] snake_Controller;
 
     [Header("Game Over Buttons")]
-    [SerializeField] Button restart;
-    [SerializeField] Button mainMenu;
+    [SerializeField] private Button restart;
+    [SerializeField] private Button mainMenu;
 
     [Header("Pause Menu Buttons")]
-    [SerializeField] Button back;
+    [SerializeField] private Button back;
 
-    static bool GameIsPaused = false;
+    private static bool GameIsPaused = false;
 
     private void Awake()
     {
@@ -46,30 +45,37 @@ public class GameMenu_Manager : MonoBehaviour
     }
     public void GameOver()
     {
-        snake_Controller.gameOver = true;
+        for(int i = 0; i < snake_Controller.Length; i++)
+            snake_Controller[i].gameOverOrPaused = true;
         gameOverMenu.SetActive(true);
     }
 
     public void Restart()
     {
+        SoundManager.Instance.PlaySoundEffect(Sounds.Sounds.ButtonClick);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MainMenu()
     {
+        SoundManager.Instance.PlaySoundEffect(Sounds.Sounds.ButtonClick);
         SceneManager.LoadScene(0);
     }
     public void PauseMenu()
     {
+        SoundManager.Instance.PlaySoundEffect(Sounds.Sounds.ButtonClick);
         pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
+        for (int i = 0; i < snake_Controller.Length; i++)
+            snake_Controller[i].gameOverOrPaused = true;
         GameIsPaused = true;
     }
 
     public void ClosePauseMenu()
     {
+        SoundManager.Instance.PlaySoundEffect(Sounds.Sounds.ButtonClick);
         pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
+        for (int i = 0; i < snake_Controller.Length; i++)
+            snake_Controller[i].gameOverOrPaused = false;
         GameIsPaused = false;
     }
 }
