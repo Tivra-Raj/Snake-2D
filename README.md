@@ -4,15 +4,15 @@
 
 # How to Play
 
-- **Single Player:** 
+**Single Player:** 
 
-W, S, A, D key to move up, down, left, right.
+- W, S, A, D key to move up, down, left, right.
 
-- **Multiplayer:**
+**Multiplayer:**
 
-Player1 - W, S, A, D key to move up, down, left, right.
+- Player1 - W, S, A, D key to move up, down, left, right.
 
-Player2 - arrow up, arrow down, arrow left, arrow right key to move up, down, left, right.
+- Player2 - arrow up, arrow down, arrow left, arrow right key to move up, down, left, right.
 
 # My Work
 
