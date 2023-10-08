@@ -1,3 +1,4 @@
+using Sounds;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,12 +6,12 @@ using UnityEngine;
 
 public class Snake_Controller : MonoBehaviour
 {
-    enum SnakeState
+    private enum SnakeState
     {
         Alive,
         Dead
     }
-    enum Direction
+    private enum Direction
     {
         Left, 
         Right, 
@@ -18,7 +19,7 @@ public class Snake_Controller : MonoBehaviour
         Down
     }
 
-    public enum SnakeType
+    private enum SnakeType
     {
         None,
         snake1,
@@ -26,44 +27,45 @@ public class Snake_Controller : MonoBehaviour
     }
 
     [Header("Snake Type Info")]
-    [SerializeField] SnakeType snakeType;
+    [SerializeField] private SnakeType snakeType;
 
     [Header("Snake Movement Info")]
-    [SerializeField] float speedController;
+    [SerializeField] private float speedController = 1.02f;
 
-    Vector2Int position;
-    Direction direction;
-    SnakeState state;
+    private Vector2Int position;
+    private Direction direction;
+    private SnakeState state;
 
-    float moveTimer;
-    float maxMoveTimer;
-    float currentSpeedController;
+    private float moveTimer;
+    private float maxMoveTimer;
+    private float currentSpeedController;
 
     [Header("Snake Body Info")]
-    [SerializeField] Sprite body;
-    [SerializeField] GameObject snakebodyHolder;
+    [SerializeField] private Sprite body;
+    [SerializeField] private GameObject snakebodyHolder;
 
-    List<SnakePosition> snakePostitonList;
-    List<SnakeBodyPart> snakeBodyPartList;
+    private List<SnakePosition> snakePostitonList;
+    private List<SnakeBodyPart> snakeBodyPartList;
 
-    int snakeBodySize;
+    private int snakeBodySize;
 
     [Header("Power Ups Info")]
-    [SerializeField] TextMeshProUGUI EffectTimeLeftText;
-    [SerializeField] int EffectTimeLeft = 5;
-    int currentTime;
+    [SerializeField] private TextMeshProUGUI EffectTimeLeftText;
+    [SerializeField] private int EffectTimeLeft = 5;
+    private int currentTime;
 
     [Header("Score Info")]
-    [SerializeField] Score_Controller score_Controller;
-    [SerializeField] int scoreValue = 10;
-    int currentScoreValue;
+    [SerializeField] private Score_Controller score_Controller;
+    [SerializeField] private int scoreValue = 10;
+    private int currentScoreValue;
 
     [Header("Game Over Info")]
-    [SerializeField] GameMenu_Manager gameMenu_Manager;
-    public bool gameOver;
+    [SerializeField] private GameMenu_Manager gameMenu_Manager;
+    [SerializeField] private GameOverStats GameOverStats;
+    public bool gameOverOrPaused;
 
     [Header("Miscellaneous")]
-    [SerializeField] ScreenWrapping screenWrapping;
+    [SerializeField] private ScreenWrapping screenWrapping;
 
     private void Awake()
     {
@@ -102,7 +104,7 @@ public class Snake_Controller : MonoBehaviour
 
     private void Update()
     {
-        if (gameOver)
+        if (gameOverOrPaused)
             return;
         else
         {
@@ -114,6 +116,11 @@ public class Snake_Controller : MonoBehaviour
                     break;
 
                 case SnakeState.Dead:
+                    if(GameOverStats.gamePlayType == GameOverStats.GamePlayType.SinglePlayer)
+                    {
+                        StartCoroutine(StopAndPlayBackgroundMusic());
+                        SoundManager.Instance.PlaySoundEffect(Sounds.Sounds.SnakeDeath);
+                    }
                     gameMenu_Manager.GameOver();
                     break;
             }
@@ -248,6 +255,8 @@ public class Snake_Controller : MonoBehaviour
                     state = SnakeState.Dead;
                 }
             }
+
+            
         }
     }
 
@@ -259,13 +268,14 @@ public class Snake_Controller : MonoBehaviour
                 snakeBodySize++;
                 CreateSnakeBody();
                 AteFood();
-                Debug.Log("Ate Mass Gainer Food");
+                //Debug.Log("Ate Mass Gainer Food");
                 break;
 
             case Food.FoodType.MassBurner:
                 snakeBodySize--;
                 DeleteSnakeBody();
-                Debug.Log("Ate Mass Burner Food");
+                score_Controller.DecreaseScore(scoreValue);
+                //Debug.Log("Ate Mass Burner Food");
                 break;
         }
     }
@@ -278,7 +288,7 @@ public class Snake_Controller : MonoBehaviour
             yield return new WaitForSeconds(1f);
             EffectTimeLeft -= 1;
             EffectTimeLeftText.text = "Effect Time Left : " + EffectTimeLeft; 
-            Debug.Log("time left " + EffectTimeLeft);
+            //Debug.Log("time left " + EffectTimeLeft);
         }
         ResetPowerUP();
         EffectTimeLeftText.enabled = false;
@@ -301,7 +311,7 @@ public class Snake_Controller : MonoBehaviour
                 scoreValue *= 2;
                 break;
         }
-        StartCoroutine("PowerUpTimer");
+        StartCoroutine(PowerUpTimer());
     }
 
     void ResetPowerUP()
@@ -314,25 +324,35 @@ public class Snake_Controller : MonoBehaviour
     {
         if(collision.GetComponent<Food>() != null )
         {
+            SoundManager.Instance.PlaySoundEffect(Sounds.Sounds.SnakeEatingFood);
             SnakeBody(collision.GetComponent<Food>().GetFoodType());
         }
 
         if(collision.GetComponent<PowerUpType>() != null )
         {
+            SoundManager.Instance.PlaySoundEffect(Sounds.Sounds.SnakeEatingPowerUps);
             SetPowerUp(collision.GetComponent<PowerUpType>().GetPowerType());
         }
 
-        if (collision.gameObject.tag == "wall")
+        if (collision.gameObject.CompareTag("wall"))
         {
-            Debug.Log("collided with wall");
+            //Debug.Log("collided with wall");
             state = SnakeState.Dead;
         }
 
-        if (collision.gameObject.tag == "Snake")
+        if (collision.gameObject.CompareTag("Snake"))
         {
-            Debug.Log("collided with Another Snake");
+            //Debug.Log("collided with Another Snake");           
             state = SnakeState.Dead;
+            
         }
+    }
+
+    private IEnumerator StopAndPlayBackgroundMusic()
+    {
+        SoundManager.Instance.StopMusic(Sounds.Sounds.BackgroundMusic);
+        yield return new WaitForSeconds(5);
+        SoundManager.Instance.PlayMusic(Sounds.Sounds.BackgroundMusic);
     }
 
     void CreateSnakeBody()

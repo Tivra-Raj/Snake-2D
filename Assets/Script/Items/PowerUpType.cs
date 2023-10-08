@@ -10,7 +10,7 @@ public class PowerUpType : MonoBehaviour
         ScoreBooster
     }
 
-    [SerializeField] PowerType type;
+    [SerializeField] private PowerType type;
 
     public PowerType GetPowerType()
     {

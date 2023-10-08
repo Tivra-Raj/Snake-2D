@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-    [SerializeField] BoxCollider2D spawnArea;
+    [SerializeField] private BoxCollider2D spawnArea;
 
     public enum FoodType
     {
         None,
         MassGainer,
-        MassBurner
+        MassBurner,
     }
 
-    [SerializeField] FoodType type;
+    [SerializeField] private FoodType type;
 
     public FoodType GetFoodType()
     {

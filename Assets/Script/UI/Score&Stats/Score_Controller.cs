@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Score_Controller : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] TextMeshProUGUI highScoreText;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI highScoreText;
 
     private int score = 0;
     private int HighScore; 
@@ -23,7 +23,15 @@ public class Score_Controller : MonoBehaviour
         GetHighScore();
     }
 
-    public int getScore() { return score; }
+    public void DecreaseScore(int decreament)
+    {
+        if(score > 0)
+            score -= decreament;
+        else score = 0;
+        scoreText.text = "" + score;
+    }
+
+    public int GetScore() { return score; }
 
     public int GetHighScore()
     {
